@@ -1,0 +1,23 @@
+lib.registerMenu({
+    id = 'mainmenu',
+    title = 'Menu title',
+    position = 'bottom-right',
+
+    options = {
+        {
+        label = 'Weapons',
+        args = {someArg = 'nice_button'}},
+    }
+}, function(selected, scrollIndex, args)
+    print(selected, scrollIndex, args)
+end) 
+
+
+
+
+REG KEY COMMANDS
+RegisterCommand(‘oxkmenu’, function()
+          lib.showMenu(‘mainmenu’)
+end, false)
+
+RegisterKeyMapping(‘oxkmenu’, ‘Open Test Menu’, ‘Keyboard’, ‘k’)
